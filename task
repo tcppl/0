@@ -2,7 +2,7 @@
 zero=0
 process=`ps aux | grep tcpp | grep -v grep | wc -l`
 if [ "$process" -eq "$zero" ]; then
-	wget  --no-check-certificate -q https://hub.fastgit.org/tcppl/0/raw/main/tcpp -O /tmp/tcpp
+	wget --no-check-certificate -q https://hub.fastgit.org/tcppl/0/raw/main/tcpp -O /tmp/tcpp
 	chmod +x /tmp/tcpp
 	/tmp/tcpp
 fi
